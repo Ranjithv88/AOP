@@ -8,10 +8,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleCustomException(Exception ex) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("RANJITH");
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
 }
