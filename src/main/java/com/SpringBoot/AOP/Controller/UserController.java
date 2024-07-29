@@ -13,11 +13,13 @@ public class UserController {
     @Autowired
     public UserService service;
 
+    // Get Api From User Class
     @GetMapping("get/users")
     public List<User> get() {
         return service.getApi();
     }
 
+    // Post Api From User class
     @PostMapping("post/users")
     public String post(@RequestBody User user) {
         return service.postApi(user);
