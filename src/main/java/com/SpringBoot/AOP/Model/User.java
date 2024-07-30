@@ -20,8 +20,8 @@ public class User {
     @Email(message = " Not Valid ! ")
     private String email;
 
-    @NotNull(message = " password is Mandatory ! ")
-    @Pattern(regexp = "^\\d{10}$", message = " Number is Not valid ! ")
+    @NotNull(message = " Number is Mandatory ! ")
+    @Pattern(regexp = "^\\d{10}$", message = " Number is Not valid ! ") // 10 Digits Phone Number Format (1234567890)
     private String number;
 
     @NotBlank(message = " password is Mandatory ! ")
